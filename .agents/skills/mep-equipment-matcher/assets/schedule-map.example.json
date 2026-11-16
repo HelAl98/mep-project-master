@@ -1,0 +1,13 @@
+{
+  "sheet": "Equipment",
+  "header_row": 1,
+  "columns": {"tag": "Equipment Tag", "description": "Description", "category": "Category", "building": "Building", "floor": "Level", "room": "Room", "quantity": "Quantity", "quantity_unit": "Unit", "scope": "Comparison Scope"},
+  "parameters": [
+    {"name": "flow", "value_column": "Flow", "unit_column": "Flow Unit"},
+    {"name": "head", "value_column": "Head", "unit_column": "Head Unit"},
+    {"name": "motor_power", "value_column": "Motor Power", "unit_column": "Power Unit"},
+    {"name": "voltage", "value_column": "Voltage", "unit_column": "Voltage Unit"},
+    {"name": "duty_arrangement", "value_column": "Duty / Standby"}
+  ],
+  "constants": {}
+}

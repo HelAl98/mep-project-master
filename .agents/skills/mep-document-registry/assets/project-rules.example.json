@@ -1,0 +1,23 @@
+{
+  "classification_rules": [
+    {"id": "hvac-folder-example", "target": "relative_path", "pattern": "(?:^|/)HVAC/", "fields": {"discipline": "HVAC"}},
+    {"id": "bms-folder-example", "target": "relative_path", "pattern": "(?:^|/)BMS/", "fields": {"discipline": "BMS"}},
+    {"id": "drawing-filename-example", "target": "filename", "pattern": "^(?P<doc>[MEP]-[0-9]{3})[_ -]+Rev[-_ ]?(?P<rev>[A-Z0-9]+)\\.(?:pdf|dwg|dxf)$", "fields": {"document_type": "Drawing"}, "captures": {"document_number": "doc", "revision": "rev"}}
+  ],
+  "revision_order": [],
+  "exclude_globs": [],
+  "max_relationship_pairs": 50000,
+  "extraction_limits": {
+    "max_file_bytes": 104857600,
+    "small_pdf_max_bytes": 2097152,
+    "small_pdf_max_pages": 20,
+    "max_pdf_pages": 2000,
+    "max_rows_per_sheet": 10000,
+    "max_columns": 200,
+    "max_sheets": 100,
+    "max_text_bytes": 8388608,
+    "max_lines": 100000,
+    "max_content_characters": 2097152,
+    "max_zip_uncompressed_bytes": 209715200
+  }
+}

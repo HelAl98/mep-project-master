@@ -1,0 +1,3 @@
+# Preserve exact source bytes across platforms: code/skill fingerprints and the
+# release manifest use SHA256 of file bytes, including original line endings.
+* -text

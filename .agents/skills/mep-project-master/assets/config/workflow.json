@@ -1,0 +1,13 @@
+[
+ {"id":"01","name":"Project intake","skills":["mep-document-registry"],"dependencies":[],"output":"Project Document Register"},
+ {"id":"02","name":"Data profiling","skills":["data-profiler"],"dependencies":["01"],"output":"Data Profile and Extraction Plan"},
+ {"id":"03","name":"Document extraction","skills":["pdf-to-structured","dwg-to-excel","drawing-analyzer"],"dependencies":["02"],"output":"Structured Document Extraction Records"},
+ {"id":"04","name":"Specification extraction","skills":["specification-extractor"],"dependencies":["03"],"output":"Exact Technical Requirements Evidence"},
+ {"id":"05","name":"Integration and lineage","skills":["etl-pipeline","data-lineage-tracker"],"dependencies":["04"],"output":"Shared SQLite Evidence and Lineage"},
+ {"id":"06","name":"Equipment identification and matching","skills":["mep-equipment-matcher"],"dependencies":["05"],"output":"Equipment Register and Mapping"},
+ {"id":"07","name":"Technical mapping and review","skills":["mep-cross-document-reviewer"],"dependencies":["06"],"output":"Requirements Matrix and Conflict Register"},
+ {"id":"08","name":"Data quality control","skills":["data-quality-check"],"dependencies":["07"],"output":"Evidence and Database Quality Report"},
+ {"id":"09","name":"Engineering review and approval","skills":["mep-document-registry","data-lineage-tracker","mep-equipment-matcher","mep-cross-document-reviewer","mep-technical-package-generator"],"dependencies":["08"],"output":"Existing Human Decision Register and Current Readiness"},
+ {"id":"10","name":"Technical package generation","skills":["mep-technical-package-generator"],"dependencies":["09"],"output":"Versioned Equipment Technical Packages"},
+ {"id":"11","name":"Document generation and export","skills":["xlsx-construction","docx-construction","pdf-construction","mep-technical-package-generator"],"dependencies":["10"],"output":"Reviewed Professional Documents and Optional PDF"}
+]

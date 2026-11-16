@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Native equipment evidence profile v1",
+  "oneOf": [{"$ref": "#/$defs/identity"}, {"$ref": "#/$defs/profile"}],
+  "$defs": {
+    "identity": {
+      "type": "object",
+      "required": ["schema_version", "profile_status", "id", "family", "original_tag", "normalized_tag", "identity_kind", "native_target", "native_observation_ids", "is_active", "physical_quantity", "provenance", "coverage_limitations"],
+      "properties": {
+        "schema_version": {"const": "mep-equipment-profile/1"},
+        "profile_status": {"enum": ["AVAILABLE", "INCOMPLETE_MISSING_RECORDED_FAMILY_OR_TAG"]},
+        "id": {"type": "string", "minLength": 1},
+        "family": {"type": ["string", "null"]}, "original_tag": {"type": ["string", "null"]}, "normalized_tag": {"type": ["string", "null"]},
+        "identity_kind": {"enum": ["Reference", "Type", "Group"]},
+        "native_target": {"type": "object", "required": ["table", "id"], "properties": {"table": {"const": "eq_occurrences"}, "id": {"type": "string"}}},
+        "native_observation_ids": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string"}},
+        "is_active": {"type": "boolean"}, "physical_quantity": {"type": "null"},
+        "provenance": {"type": "object"}, "coverage_limitations": {"type": "array", "items": {"type": "string"}}
+      },
+      "description": "Physical Instance is deliberately not emitted: native claims alone cannot confirm one. No repeated-tag grouping or physical count."
+    },
+    "page": {"type": "object", "required": ["status", "items", "total", "limit", "offset", "next_offset"], "properties": {"items": {"type": "array"}}},
+    "profile": {
+      "type": "object", "required": ["schema_version", "equipment_profile_contract", "reference", "sections", "physical_equipment_quantity", "source_coverage", "limitations"],
+      "properties": {
+        "schema_version": {"const": "mep-evidence-reader/1"}, "equipment_profile_contract": {"const": "mep-equipment-profile/1"},
+        "reference": {"type": "string"}, "physical_equipment_quantity": {"type": "null"},
+        "sections": {"type": "object", "required": ["identities", "observations", "parameters", "drawings", "specifications", "context", "findings", "candidate_relationships", "project_source_limitations"],
+          "properties": {"identities": {"allOf": [{"$ref": "#/$defs/page"}, {"properties": {"items": {"items": {"$ref": "#/$defs/identity"}}}}]},
+            "observations": {"$ref": "#/$defs/page"}, "parameters": {"$ref": "#/$defs/page"}, "specifications": {"$ref": "#/$defs/page"}, "context": {"$ref": "#/$defs/page"}}}
+      },
+      "description": "Existing paginated Reader sections retain original parameters/units/source hashes/locators/currency and pending relationships. Unknown quantity and coverage are explicit."
+    }
+  }
+}

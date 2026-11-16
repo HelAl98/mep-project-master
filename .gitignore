@@ -1,0 +1,21 @@
+# Engineering project state never belongs in this source repository
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+work/
+outputs/
+local-projects/
+test-artifacts/
+backups/
+~$*
+.DS_Store
+Thumbs.db

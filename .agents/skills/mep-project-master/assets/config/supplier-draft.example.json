@@ -1,0 +1,19 @@
+{
+  "schema_version": "mep-supplier-draft-config/1",
+  "project_name": "Project name from existing configuration",
+  "references": ["REF-001"],
+  "title": "Equipment technical schedule and selected specification clauses",
+  "disciplines": ["Mechanical", "Electrical", "BMS"],
+  "language": "en",
+  "status": "draft",
+  "schedule_format": "xlsx",
+  "specification_format": "pdf",
+  "source_reference_visibility": "compact",
+  "optional_context": [],
+  "include_missing_information": true,
+  "essential_parameters": [],
+  "specification_rules": [],
+  "max_equipment": 500,
+  "max_supplier_clauses": 60,
+  "docx": false
+}

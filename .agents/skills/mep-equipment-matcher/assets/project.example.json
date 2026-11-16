@@ -1,0 +1,14 @@
+{
+  "schema_version": "mep-equipment-config/1",
+  "tag_patterns": ["(?<![\\w])(?:AHU|FAHU|FCU|CHWP|CHW-P|EF|DB|MDB|MCC|UPS|BMS|DDC)[-_ ]+(?:[A-Z]+[0-9]+[-_ ]+)?[0-9]+[A-Z]?(?![\\w])"],
+  "prefix_aliases": {"CHW-P": "CHWP"},
+  "tag_aliases": {},
+  "category_aliases": {"Chilled Water Pump": "CHWP", "Air Handling Unit": "AHU"},
+  "discipline_aliases": {"HVAC Mechanical": "HVAC"},
+  "building_aliases": {},
+  "floor_aliases": {},
+  "parameter_aliases": {"Flow Rate": "flow", "Pump Head": "head", "Motor Rating": "motor_power", "Duty / Standby": "duty_arrangement"},
+  "type_required_by_category": {"CHWP": ["flow", "head", "motor_power", "voltage", "duty_arrangement"]},
+  "max_candidate_pairs": 50000,
+  "auto_confirm": false
+}

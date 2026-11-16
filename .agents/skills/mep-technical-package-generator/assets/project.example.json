@@ -1,0 +1,19 @@
+{
+  "schema_version": "mep-package-config/1",
+  "output_root": null,
+  "language": "en",
+  "rtl": false,
+  "category_aliases": {},
+  "discipline_aliases": {},
+  "category_columns": {
+    "CHWP": ["flow", "head", "pump_type", "motor_power", "speed", "voltage", "duty_arrangement"],
+    "AHU": ["airflow", "cooling_capacity", "heating_capacity", "esp", "motor_power", "electrical_supply", "filters"],
+    "MDB": ["voltage", "current", "short_circuit_rating", "ingress_protection", "incoming_outgoing_arrangement"]
+  },
+  "mandatory_parameters": {},
+  "type_requirements": {},
+  "group_by": ["discipline", "system", "category", "type", "building"],
+  "category_titles": {},
+  "source_links": true,
+  "max_path_length": 235
+}

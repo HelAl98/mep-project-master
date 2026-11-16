@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEP Project Master"
+  short_description: "Coordinate MEP evidence, review and technical packages"
+  default_prompt: "Use $mep-project-master to inspect the existing project state and resume the next eligible stage in Guided Mode."

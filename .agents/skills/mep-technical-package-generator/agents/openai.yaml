@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEP Technical Package Generator"
+  short_description: "Build traceable equipment packages from reviewed data"
+  default_prompt: "Use $mep-technical-package-generator to assess readiness and prepare traceable equipment documentation from the existing reviewed project database."

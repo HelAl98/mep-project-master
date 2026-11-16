@@ -1,0 +1,149 @@
+{
+  "repository": "https://github.com/datadrivenconstruction/DDC_Skills_for_AI_Agents_in_Construction",
+  "commit": "410ed1e71e4a5c6fd231afd0c8d1e586a9f546e8",
+  "skills": {
+    "data-profiler": {
+      "repository_path": "2_DDC_Book/2.1-Data-Types-Classification/data-profiler",
+      "files_sha256": {
+        "claw.json": "b9539ffe044b37bb4477ba1c3a2f5126548ce4aeed95b8fe6b5a7e0da925a6a3",
+        "instructions.md": "5caf2e5b00d542305598beb9d317117faf8ffecf7cbeaede8b8e3cdf10483551",
+        "SKILL.md": "b19738cee656bdb183c774b91bb767e6b7cd9946b5305ff918d438bc94f31312"
+      },
+      "git_blobs": {
+        "SKILL.md": "3f60e174556f00916838ce9f1b5bbc1f408945e9",
+        "claw.json": "2cd4ab47dbed8bbeef261cc8b4a74f9c5b1b1f35",
+        "instructions.md": "8074aafcd1467117428d1cf7bfe5e752836cd661"
+      }
+    },
+    "xlsx-construction": {
+      "repository_path": "4_DDC_Curated/Document-Generation/xlsx-construction",
+      "files_sha256": {
+        "claw.json": "678c78dbee866050b86f1b7213a955f29ef3a8923390d3b807ecc6fc8faac321",
+        "instructions.md": "622a8edc583dbc0334718fe077387ca6298e4a6806eee74910da20d6731bcde1",
+        "SKILL.md": "d128c2433f8ca728fcec412185918cccb025121b33f9b55247be9cea0e39db03"
+      },
+      "git_blobs": {
+        "SKILL.md": "79306df8a31725c26c211c37634223cd75868c12",
+        "claw.json": "2bb40219b693f737c130511c4186a0cd32719fde",
+        "instructions.md": "ff4cdfe123538d79e20fb58df9cac6245aa3e2fb"
+      }
+    },
+    "docx-construction": {
+      "repository_path": "4_DDC_Curated/Document-Generation/docx-construction",
+      "files_sha256": {
+        "claw.json": "5836d474aaeed39f5c6e32dd882c6928447ffaa871e14580eac1f102efacc9a3",
+        "instructions.md": "aee46f131c089d133fe8e1aa051a24a682ad8092cd9903978c930ef0dd103f45",
+        "SKILL.md": "5088b0c0339dad989e972b8a32fede638275dc76bea70dea6fa1cdedf74b18be"
+      },
+      "git_blobs": {
+        "SKILL.md": "fe2264c28481ef5ca413d16bd7cc0b1f694670a3",
+        "claw.json": "c052ecd7e8c4931c49e605c432de9cd81a71f031",
+        "instructions.md": "077ae2395dfc6065650e053ad9a5b223b7c14675"
+      }
+    },
+    "pdf-construction": {
+      "repository_path": "4_DDC_Curated/Document-Generation/pdf-construction",
+      "files_sha256": {
+        "claw.json": "2edc67ff4ac8564d8ee39da66c2508ac58577bc6b7eff9c75ddbf4019284e37b",
+        "instructions.md": "f5e3a4c6f1716f2f041de7ef0e8fa998a03e4c804cbbf3ac502bf4f369d08c12",
+        "SKILL.md": "aa14d2021b52e05dd0248048a98680cffc04adb6b4190a6bfb2f89a41e18497b"
+      },
+      "git_blobs": {
+        "SKILL.md": "398c12c7b5e7ab18f268ff1c0217252f9588f0fd",
+        "claw.json": "1d61b6f1c7a969b6fd3d35326d08d7b0364ac551",
+        "instructions.md": "600da6c79fe374d1167aa19dae9c866f1d437218"
+      }
+    },
+    "pdf-to-structured": {
+      "repository_path": "2_DDC_Book/2.4-PDF-CAD-to-Data/pdf-to-structured",
+      "files_sha256": {
+        "claw.json": "de50ddac3e2634403a83c0c479f773f2eab4f722da973aaad83c93dfad88dcc4",
+        "instructions.md": "fb7faba4f6e4d949b64176cc04059a48c39910f64acf2bec41e9cd56223beca0",
+        "SKILL.md": "7800845301ee467ee46c65c60251b3efde5f4f552bfcf6370c94937efb9c3cc9"
+      },
+      "git_blobs": {
+        "SKILL.md": "223aac26b4c2e4830359a42be75531fb7b870fd3",
+        "claw.json": "1b836fca912e9877c62909bbaa4ef6165907adbc",
+        "instructions.md": "8f886fae9a1ae1dc77bfa5f39ae2d11389fecfcf"
+      }
+    },
+    "drawing-analyzer": {
+      "repository_path": "2_DDC_Book/2.4-PDF-CAD-to-Data/drawing-analyzer",
+      "files_sha256": {
+        "claw.json": "874bf8d2ef328450cf4625474f22dfda39cc4a69a9c6f903d10e3dc116199227",
+        "instructions.md": "19f90c4560097f98ebaa8567a267a5952139018c8d80cd151b1621c97adb753a",
+        "SKILL.md": "fa960b545d4c77f2be2723826e108d47fb4ccdd78e6ed7279094ca1da11950cb"
+      },
+      "git_blobs": {
+        "SKILL.md": "65b321d82f51aa1c97ce559a0e5f810847971c7e",
+        "claw.json": "bf14bb220f486a373d98d924dd21712eb658cba8",
+        "instructions.md": "7fe00f228bfa2f6e37d2323f558a90590f85173a"
+      }
+    },
+    "specification-extractor": {
+      "repository_path": "2_DDC_Book/2.4-PDF-CAD-to-Data/specification-extractor",
+      "files_sha256": {
+        "claw.json": "4ab325f6dd53a0cb9b0099b7cc6e32320f6e7f62c1f650dcad473510784ebabf",
+        "instructions.md": "de8004aeec3c1e17e9faa793c9c83cf656546062d8a5cd5572a0da7ffc69746c",
+        "SKILL.md": "0c5ea465d9da6548343a6c37c9ac6290daa6a060b66abef41c16aca09fbe1799"
+      },
+      "git_blobs": {
+        "SKILL.md": "bbd359f9f7ca3a40abc9d0da48f78885378af52f",
+        "claw.json": "90f3cc26db76fe7153079c8481af162c04fe47bf",
+        "instructions.md": "6798662104fc16bed4c6c53de93f254a3d8bc7b6"
+      }
+    },
+    "dwg-to-excel": {
+      "repository_path": "1_DDC_Toolkit/CAD-Converters/dwg-to-excel",
+      "files_sha256": {
+        "claw.json": "c7797aaf89d86bd3ec5bf7370ee5cbdd52e2589743952b5f9fba7e9e36a63035",
+        "instructions.md": "eabdaff46001d4fcbc0cd8970bb64c22492749df7479c83d2340577a2ec98096",
+        "SKILL.md": "cd7e324f0db5b184dc0b03073e2c3d3761fa5d04c0b3fcc53de585dfa878d61b"
+      },
+      "git_blobs": {
+        "SKILL.md": "7351335999df10dde0d9fa994b585596959e8867",
+        "claw.json": "4b045e9d10bb432698b357dd3b57c3bb40fac918",
+        "instructions.md": "b2f5db77d307d4d7d9e7045d627150db1ac4e660"
+      }
+    },
+    "etl-pipeline": {
+      "repository_path": "2_DDC_Book/4.2-ETL-Automation/etl-pipeline",
+      "files_sha256": {
+        "claw.json": "cc6b118bb674dfdf5c8e681b0390b1d03ec79dc7e0706851432dd445e1f033b9",
+        "instructions.md": "713d6dbfb7eb1ea577f0c8b222f561a5f36895662a9c1feafd4cae3928271f5b",
+        "SKILL.md": "accad62809676e0c0b1c5efbf81c49cbebebd9f98595873a53991a19bd862a29"
+      },
+      "git_blobs": {
+        "SKILL.md": "b886256a634fd8cb40c32c29ee6fb4f9ccc2d4b3",
+        "claw.json": "8cc8ac05d6c57fd0f58af145ac0a54b5f891e778",
+        "instructions.md": "caf02b65d83fc209394a3461fce0c68e3b8b7c50"
+      }
+    },
+    "data-lineage-tracker": {
+      "repository_path": "2_DDC_Book/2.6-Data-Quality-Validation/data-lineage-tracker",
+      "files_sha256": {
+        "claw.json": "d52a4b25d8b7eef569f44ba675f43cb8fcb260a29b8ef8ed849be916bf7d0f5a",
+        "instructions.md": "cc3a6560819a47f7a81d009db811a42bfd46ffcff2b1419d37554bf31ee30749",
+        "SKILL.md": "45474ee7cbaacf1827512478be134dbd19a4545ff295bd9c3f89dfca6dff2f95"
+      },
+      "git_blobs": {
+        "SKILL.md": "ba8afc7ade70a3868d654e018ddec9c0a0bc42bd",
+        "claw.json": "60ae93bcb6ac055de0f567086a6e507c8be3f5fd",
+        "instructions.md": "3052d81d0e05ff25ad66803221c1d81f3eb70534"
+      }
+    },
+    "data-quality-check": {
+      "repository_path": "2_DDC_Book/2.6-Data-Quality-Validation/data-quality-check",
+      "files_sha256": {
+        "claw.json": "692862f9b71b63073c65fe900d15af4ec3de389871ee0c7411bf74c82a57bea2",
+        "instructions.md": "bd05074ff38e1c0d3e186fb80b4df604228193883c9d0858fb23d6940c7dcdda",
+        "SKILL.md": "194d871bfae6d1b4ed8df44d4f068edf130079926c1ef859c16dbed004ef88ae"
+      },
+      "git_blobs": {
+        "SKILL.md": "c4b34ba87007943eb50400a3d83986a97d5dbf69",
+        "claw.json": "40be9e3a7e337f7cf47ec66931f8bb8213234782",
+        "instructions.md": "5f5bc0e329698b467ab2ec9dfbc09a7bda8a5e0b"
+      }
+    }
+  }
+}

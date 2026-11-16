@@ -1,0 +1,9 @@
+{
+  "sheet": "Elements",
+  "header_row": 1,
+  "role": "drawing",
+  "coordinate_system": null,
+  "columns": {"tag": "Equipment Tag", "entity_type": "Entity Type", "block": "Block Name", "layer": "Layer", "handle": "Handle", "x": "X", "y": "Y", "z": "Z", "units": "Drawing Units", "drawing_id": "Drawing Number", "building": "Building", "floor": "Floor", "room": "Room"},
+  "attribute_columns": {},
+  "parameters": []
+}

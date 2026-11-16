@@ -1,0 +1,16 @@
+{
+  "schema_version": "mep-operation-scope/1",
+  "project_id": "replace-with-existing-project-id",
+  "operation": "C",
+  "action": "reuse",
+  "scope": {"equipment_references": ["replace-with-saved-equipment-reference"], "source_selection": "equipment_evidence"},
+  "required_evidence": ["equipment"],
+  "excluded_sources": [],
+  "accepted_limitation_ids": [],
+  "coverage_limitations": [{"reason": "Replace with actual known coverage limitation, or remove this item."}],
+  "currency_policy": {"max_snapshot_age_seconds": 900, "allow_historical_draft_evidence": false},
+  "execution_mode": "guided",
+  "approval_requirements": {},
+  "delivery_mode": "draft",
+  "output_directory": "operation-outputs/new-explicit-attempt"
+}

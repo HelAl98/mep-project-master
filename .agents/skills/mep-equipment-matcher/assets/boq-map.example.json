@@ -1,0 +1,7 @@
+{
+  "sheet": "BOQ",
+  "header_row": 1,
+  "columns": {"item_number": "Item", "description": "Description", "category": "Equipment Category", "section": "Section", "quantity": "Quantity", "quantity_unit": "Unit", "scope": "Comparison Scope"},
+  "parameters": [],
+  "constants": {"identity_kind": "group"}
+}

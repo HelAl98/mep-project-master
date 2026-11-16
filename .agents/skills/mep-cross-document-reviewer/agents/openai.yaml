@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEP Cross-Document Reviewer"
+  short_description: "Map technical requirements and review document conflicts"
+  default_prompt: "Use $mep-cross-document-reviewer to map specification requirements and review equipment evidence in the existing project database."

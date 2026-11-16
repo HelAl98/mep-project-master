@@ -1,0 +1,16 @@
+# Deferred first-project validation
+
+The user explicitly deferred execution. No tests, regressions, CLI smoke runs, package generation examples, migrations, actual project processing, benchmarks or Word/Excel rendering were performed. Source inspection and installation hashes do not establish runtime correctness. The two upstream Matcher/Reviewer implementations remain execution-unverified.
+
+For a later authorized session:
+
+1. Use a backed-up working copy containing actual reviewed equipment/specification data and the exact reviewer configuration. Verify the expected existing schema ledgers and query-only connection. Check that the registry facade never writes revision candidates and that no ingestion/matching/comparison actions run.
+2. Select a small known category with one verified type and another pending type. Inspect readiness reasons, identity/type membership, original source revisions, coverage and every outstanding case. Confirm that final generation fails for incomplete evidence while draft output retains all limitations.
+3. Verify instance deduplication across repeated views, type/material/motor/control distinctions and location boundaries. Compare source quantities independently, including a pump-set BOQ/accessories/duty arrangement. Require an actual scope/count basis or existing approved quantity interpretation; do not substitute tag counts.
+4. Inspect approved/original technical values and complete mechanical/electrical/BMS/installation/testing/documentation paragraphs against database/source records. Include an exception and a multi-page requirement. Confirm no missing text or unsupported source gets silently treated as approved.
+5. Generate an internal draft and open every workbook/Word document. Check widths, page breaks, source-language text, repeated headings, long JSON companions, local relative links and supplier-facing compliance scope. Inspect blank commercial responses and prominent non-issue labels.
+6. Confirm successful file generation does not create engineering approval. Generate an approved technical package only for an actually eligible scope; RFQ remains a draft. Check instances/types with different readiness stay independent.
+7. Regenerate unchanged inputs and check version reuse/output hashes. Change one actual reviewed source/decision upstream and check old packages are potentially outdated while new versions preserve all previous output. Include damaged completed files, interrupted attempts and locks in recovery review; never delete original evidence.
+8. Only after correctness/visual quality is established, measure real-workload time/memory and scale gradually. No capacity/performance numbers are claimed here.
+
+Unverified assumptions: inspected private upstream projection boundaries/schema/key semantics, stale-review calculations, read-only SQLite/WAL behavior, numeric/source scope reconciliation, package grouping/guards, snapshot/version idempotence, Windows names/links/long paths, locks/partial recovery and Word/Excel layout. No dependency was reinstalled or freshly exercised for this implementation. Native DWG/OCR are irrelevant to generation and remain upstream limitations. No procurement/supplier/pricing/issue workflow, material takeoff or further skill is implemented.

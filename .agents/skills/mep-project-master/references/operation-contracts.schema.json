@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MEP operation contracts v1",
+  "oneOf": [{"$ref": "#/$defs/scope"}, {"$ref": "#/$defs/plan"}, {"$ref": "#/$defs/receipt"}],
+  "$defs": {
+    "strings": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "operation": {"enum": ["A", "B", "C", "D", "E"]},
+    "eligibility": {"enum": ["READY", "READY_WITH_LIMITATIONS", "BLOCKED", "REQUIRES_HUMAN_ACTION", "UNKNOWN"]},
+    "descriptor": {"type": "object", "required": ["path", "sha256"], "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"$ref": "#/$defs/hash"}}},
+    "scope": {
+      "type": "object", "required": ["schema_version", "project_id", "operation", "scope", "output_directory"],
+      "properties": {
+        "schema_version": {"const": "mep-operation-scope/1"}, "project_id": {"type": "string", "minLength": 1},
+        "operation": {"$ref": "#/$defs/operation"}, "action": {"enum": ["reuse", "registry_rescan", "native_job", "equipment_import", "matching_proposals", "draft"]},
+        "scope": {"type": "object", "additionalProperties": false, "properties": {
+          "source_file_ids": {"$ref": "#/$defs/strings"}, "families": {"$ref": "#/$defs/strings"},
+          "equipment_references": {"$ref": "#/$defs/strings"}, "source_selection": {"enum": ["explicit", "equipment_evidence", "registered_root"]}}},
+        "required_evidence": {"type": "array", "items": {"enum": ["registration", "extraction", "equipment", "parameters", "specification_candidates", "boq_context", "electrical_context", "bms_context"]}},
+        "excluded_sources": {"type": "array", "items": {"type": "object", "required": ["file_id", "reason"], "properties": {"file_id": {"type": "string", "minLength": 1}, "reason": {"type": "string", "minLength": 1}}}},
+        "accepted_limitation_ids": {"$ref": "#/$defs/strings"},
+        "coverage_limitations": {"type": "array", "items": {"type": "object", "required": ["reason"], "properties": {"reason": {"type": "string", "minLength": 1}}}},
+        "currency_policy": {"type": "object", "properties": {"max_snapshot_age_seconds": {"type": "integer", "minimum": 1, "maximum": 3600}, "allow_historical_draft_evidence": {"type": "boolean"}}},
+        "execution_mode": {"enum": ["guided", "automatic"]},
+        "approval_requirements": {"type": "object", "additionalProperties": false, "properties": {
+          "identity": {"type": "boolean"}, "quantity": {"type": "boolean"}, "specification_applicability": {"type": "boolean"},
+          "document_revision": {"type": "boolean"}, "procurement_release": {"type": "boolean"}}},
+        "review_clause_ids": {"$ref": "#/$defs/strings"}, "output_directory": {"type": "string", "minLength": 1},
+        "delivery_mode": {"type": "string"}, "supplier_options": {"type": "object"},
+        "supplier_runtime": {"type": "object", "required": ["node_executable", "artifact_module_root"], "additionalProperties": false,
+          "properties": {"node_executable": {"type": "string"}, "artifact_module_root": {"type": "string"}}},
+        "reuse_supplier_receipt": {"$ref": "#/$defs/descriptor"}, "native_job": {"type": "object"}, "native_plan_path": {"type": "string"},
+        "artifacts": {"type": "array", "items": {"$ref": "#/$defs/descriptor"}}, "candidate_limit": {"type": "integer", "minimum": 1, "maximum": 200}
+      },
+      "description": "Semantic validation also enforces project identity, supported action per operation, nonempty exact scope, path containment, source closure, freshness and native contracts."
+    },
+    "plan": {
+      "type": "object", "required": ["schema_version", "project_id", "operation", "eligibility", "resolved_source_ids", "reasons", "fingerprint_basis", "plan_fingerprint", "actions", "expected_outputs", "plan_is_execution_authorization"],
+      "properties": {"schema_version": {"const": "mep-operation-plan/1"}, "project_id": {"type": "string"}, "operation": {"$ref": "#/$defs/operation"},
+        "eligibility": {"$ref": "#/$defs/eligibility"}, "resolved_source_ids": {"$ref": "#/$defs/strings"}, "reasons": {"type": "object"},
+        "fingerprint_basis": {"type": "object"}, "plan_fingerprint": {"$ref": "#/$defs/hash"}, "actions": {"type": "array"}, "expected_outputs": {"type": "object"},
+        "plan_is_execution_authorization": {"const": false}, "formal_stage_completion": {"const": false}, "procurement_release_authorized": {"const": false}}
+    },
+    "receipt": {
+      "type": "object", "required": ["schema_version", "operation_id", "project_id", "operation", "operation_scope", "execution_state", "plan_fingerprint", "actual_source_ids", "outputs", "verification"],
+      "properties": {"schema_version": {"const": "mep-operation-receipt/1"}, "operation_id": {"type": "string"}, "project_id": {"type": "string"},
+        "operation": {"$ref": "#/$defs/operation"}, "operation_scope": {"$ref": "#/$defs/scope"}, "plan_fingerprint": {"$ref": "#/$defs/hash"},
+        "execution_state": {"enum": ["RUNNING", "SUCCEEDED", "FAILED_PARTIAL"]}, "actual_source_ids": {"$ref": "#/$defs/strings"},
+        "outputs": {"type": "array", "items": {"$ref": "#/$defs/descriptor"}}, "verification": {"type": "object"},
+        "engineering_approval": {"const": false}, "formal_stage_completion": {"const": false}, "procurement_release_authorized": {"const": false}}
+    }
+  }
+}

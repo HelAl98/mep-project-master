@@ -1,0 +1,5 @@
+# MEP native delegation. Progression remains in mep-project-master.
+# Manual-only spawning is an instruction policy in AGENTS.md, not a TOML flag.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 2

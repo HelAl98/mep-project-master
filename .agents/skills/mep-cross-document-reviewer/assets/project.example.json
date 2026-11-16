@@ -1,0 +1,35 @@
+{
+  "schema_version": "mep-technical-review/1",
+  "discipline_aliases": {"Mechanical HVAC": "HVAC"},
+  "system_aliases": {},
+  "equipment_aliases": {},
+  "parameter_aliases": {"pump_flow": "flow", "rated_voltage": "voltage"},
+  "section_mappings": [],
+  "applicability_rules": [
+    {
+      "id": "ahu-multi-topic-candidates",
+      "level": "equipment_category",
+      "equipment": {"categories": ["AHU", "FAHU"]},
+      "requirement": {"topics": ["airflow", "coil", "filter", "insulation", "motor", "vfd", "interface", "monitoring", "commissioning", "installation", "submittal", "warranty"]},
+      "basis": "Example candidate association only: replace with actual project specification section and scope authority."
+    },
+    {
+      "id": "pump-multi-topic-candidates",
+      "level": "equipment_category",
+      "equipment": {"categories": ["CHWP", "CWP", "HWP", "EFP", "DFP", "JOCKEY-P", "DWP", "BPS", "TP", "SEWP", "SP"]},
+      "requirement": {"topics": ["flow", "head", "casing", "material", "seal", "bearing", "motor", "protection", "inspection", "commissioning", "installation", "monitoring"]},
+      "basis": "Example candidate association only: verify pump category/system and actual project scope before approval."
+    }
+  ],
+  "parameter_patterns": [
+    {"id": "literal-voltage", "parameter": "voltage", "operator": "eq", "pattern": "\\bvoltage\\s*(?:shall be|:|=)\\s*(?P<value>[0-9]+(?:\\.[0-9]+)?)\\s*(?P<unit>V)\\b"},
+    {"id": "literal-minimum-airflow", "parameter": "airflow", "operator": "min", "pattern": "\\bminimum\\s+airflow\\s*(?:of|:|=)?\\s*(?P<value>[0-9]+(?:\\.[0-9]+)?)\\s*(?P<unit>m3/h|m³/h|L/s|CFM)\\b"}
+  ],
+  "tolerances": {},
+  "unit_contexts": {},
+  "precedence_rules": [],
+  "quantity_rules": [],
+  "coverage_rules": [],
+  "status_labels": {},
+  "report": {"title": "MEP Cross-Document Technical Review"}
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEP Equipment Matcher"
+  short_description: "Match MEP equipment with preserved source evidence"
+  default_prompt: "Use $mep-equipment-matcher to organize and review equipment references in the existing project database."

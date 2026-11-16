@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:mep:human-decision:1",
+  "title": "Granular human assertion event in the existing master audit",
+  "type": "object",
+  "required": ["schema_version", "id", "project_id", "decision_type", "target", "target_key", "target_label", "scope", "result", "assertion", "reviewer_provided_identity", "rationale", "created_at", "supporting_references", "original_evidence_and_version_basis", "previous_decision_id", "proposal_sha256", "authorization", "upstream_engineering_approval_created"],
+  "properties": {
+    "schema_version": {"const": "mep-human-decision/1"},
+    "id": {"type": "string", "minLength": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "decision_type": {"enum": ["identity", "quantity", "specification_applicability", "document_revision"]},
+    "target": {"$ref": "#/$defs/reference"},
+    "target_key": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target_label": {"type": "string"},
+    "scope": {"type": ["object", "null"]},
+    "result": {"enum": ["Accepted", "Rejected", "Unresolved"]},
+    "assertion": {"type": "object"},
+    "reviewer_provided_identity": {"type": "string", "minLength": 1},
+    "rationale": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "supporting_references": {"type": "array", "maxItems": 50, "items": {"$ref": "#/$defs/reference"}},
+    "original_evidence_and_version_basis": {
+      "type": "object",
+      "required": ["target", "supporting_evidence", "scope", "registered_source_heads", "source_currency_assessment", "sha256"],
+      "properties": {"sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+    },
+    "previous_decision_id": {"type": ["string", "null"]},
+    "proposal_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "authorization": {
+      "type": "object",
+      "required": ["channel", "nonce", "independently_authenticated", "assurance", "test_only"],
+      "properties": {
+        "channel": {"enum": ["local_interactive_terminal", "synthetic_fixture_test"]},
+        "nonce": {"type": "string"},
+        "independently_authenticated": {"const": false},
+        "assurance": {"type": "string"},
+        "test_only": {"type": "boolean"}
+      }
+    },
+    "upstream_engineering_approval_created": {"const": false}
+  },
+  "$defs": {"reference": {"type": "object", "required": ["table", "id"], "properties": {"table": {"type": "string"}, "id": {"type": "string", "minLength": 1}}}},
+  "additionalProperties": false
+}

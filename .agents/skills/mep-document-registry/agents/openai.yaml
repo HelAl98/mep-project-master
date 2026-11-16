@@ -1,0 +1,4 @@
+interface:
+  display_name: "MEP Document Registry"
+  short_description: "Local MEP document intake and revision registry"
+  default_prompt: "Use $mep-document-registry to register project documents, inspect source evidence and revisions, and export a reviewable document register."

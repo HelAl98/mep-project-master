@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:mep:evidence-reader:1",
+  "title": "MEP EvidenceReader v1 response envelope",
+  "type": "object",
+  "required": ["schema_version", "project_id", "operation", "read_at", "database", "database_access", "currency_assessment", "engineering_approval_created"],
+  "properties": {
+    "schema_version": {"const": "mep-evidence-reader/1"},
+    "project_id": {"type": "string"},
+    "operation": {"type": "string"},
+    "read_at": {"type": "string"},
+    "database": {"type": "string"},
+    "database_access": {"type": "string"},
+    "currency_assessment": {"type": "object"},
+    "engineering_approval_created": {"const": false},
+    "physical_equipment_quantity": {"type": "null"},
+    "sections": {"type": "object", "additionalProperties": {"$ref": "#/$defs/page"}},
+    "result": {"$ref": "#/$defs/page"},
+    "items": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "page": {
+      "type": "object",
+      "required": ["status", "items", "total", "limit", "offset", "next_offset"],
+      "properties": {
+        "status": {"enum": ["AVAILABLE", "NO_RECORDED_EVIDENCE", "UNSUPPORTED"]},
+        "items": {"type": "array", "items": {"type": "object"}},
+        "total": {"type": ["integer", "null"], "minimum": 0},
+        "limit": {"type": "integer", "minimum": 1, "maximum": 200},
+        "offset": {"type": "integer", "minimum": 0},
+        "next_offset": {"type": ["integer", "null"], "minimum": 0},
+        "reason": {"type": "string"}
+      },
+      "allOf": [{"if": {"properties": {"status": {"const": "UNSUPPORTED"}}}, "then": {"required": ["reason"], "properties": {"total": {"type": "null"}}}}],
+      "additionalProperties": true
+    }
+  }
+}
